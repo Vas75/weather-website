@@ -192,5 +192,5 @@ The express.static() middleware tells Express to look in a specific folder for t
 
 /*
 expressjs.com api ref page has the documentation to do all this stuff, good idea to 
-start referencing the docs when I build stuff.
+start referencing the docs when I build stuff!
 */
