@@ -1,0 +1,32 @@
+{{!-- this handlebars view replaces the static html for hompage --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <link rel="shortcut icon" href="images/weather.png" type="image/x-icon">
+  <title>Weather</title>
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+    <p>Use this site to get your weather.</p>
+
+    <form id='weatherForm'>
+      <input type="text" id="address" placeholder="address">
+      <button type="submit">search</button>
+    </form>
+
+    <p id="message-1"></p>
+    <p id='message-2'></p>
+  </div>
+
+  {{>footer}}
+  <script src="/scripts/app.js"></script>
+</body>
+
+</html>
