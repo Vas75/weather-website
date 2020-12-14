@@ -11,11 +11,16 @@ const forecast = (location, latitude, longitude, callback) => {
     } else if (body.error) {
       callback(`Unable to find location. ${body.error.info}`, undefined);
     } else {
-      const { temperature, feelslike, weather_descriptions } = body.current;
-
+      const {
+        temperature,
+        feelslike,
+        weather_descriptions,
+        humidity,
+      } = body.current;
+      console.log(body.current);
       callback(
         undefined,
-        `Condition outside: ${weather_descriptions[0]}. It's currently ${temperature} degrees out, but it feels like ${feelslike} degrees.`
+        `Condition outside: ${weather_descriptions[0]}. It's currently ${temperature} degrees out, but it feels like ${feelslike} degrees. Humidity is ${humidity}%.`
       );
     }
   });
